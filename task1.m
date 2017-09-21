@@ -1,15 +1,15 @@
-a = 2; 
-b = 4.1;
-xn=0.77; 
-xk=1.77; 
-dx=0.2;
-X=[1.24,1.38,2.38,3.21,0.68]; 
+a = 2.5; 
+b = 4.6;
+xn=1.1; 
+xk=3.6; 
+dx=0.5;
+X=[1.2,1.28,1.36,1.46,2.35]; 
 X=sort(X);
 x=xn:dx:xk;
 
 function yres=yCalc(x,a,b)
-  chisl = log(b^2 - x.^2)/log(a);
-  znam = (abs(x.^2 - a^2)).^(1/3);
+  chisl = (a + b*x).^2.5;
+  znam = 1 + log(a + b*x);
   yres = chisl./znam;
 end
 

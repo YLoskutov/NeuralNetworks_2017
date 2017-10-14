@@ -18,6 +18,11 @@ for iter = 1:num_iters
     %
 
 
+h=theta'*X';    
+
+difference=1/m*(X'*X*theta-X'*y);
+
+theta=theta-alpha.*difference;
 
 
 
